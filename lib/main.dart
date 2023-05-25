@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netclan_explorer/screens/job_aspirant_screen.dart';
 import 'package:netclan_explorer/screens/merchant_screen.dart';
 import 'package:netclan_explorer/screens/refine_screen.dart';
+import 'package:netclan_explorer/widgets/drawer.dart';
 import 'screens/people_screen.dart';
 
 void main() => runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: _title,
       home: MyStatefulWidget(),
     );
@@ -113,6 +114,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
           MerchantScreen(),
         ],
       ),
+      drawer: MyDrawer(),
     );
   }
 }
